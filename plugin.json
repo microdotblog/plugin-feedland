@@ -3,7 +3,6 @@
   "title": "FeedLand shortcode",
   "description": "Add a FeedLand-powered blogroll to your blog.",
   "includes": [
-    "plugin_feedland.html",
-    "/css/feedland.css"
+    "plugin_feedland.html"
   ]  
 }

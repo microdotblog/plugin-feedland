@@ -1,0 +1,8 @@
+{
+  "version": "1.0",
+  "title": "FeedLand shortcode",
+  "description": "Add a FeedLand-powered blogroll to your blog.",
+  "includes": [
+    "plugin_feedland.html"
+  ]  
+}

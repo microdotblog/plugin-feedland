@@ -1,18 +1,20 @@
 {{ with .Get "username" }}
 
-  $(document).ready (function() {
-    const options = {
-      title: "{{ . }} blogroll",
-      urlBlogrollOpml: "https://feedland.org/opml?screenname={{ . }}",
-      urlFeedlandViewBlogroll: "https://feedland.org/?river=true&screenname={{ . }}", 
-      idWhereToAppend: "idBlogrollContainer",
-      maxItemsInBlogroll: 40,
-      blogrollDisplayedCallback: function () {
-        $(".divPageBody").css("display", "block");
-      }
-    };
-  
-    blogroll(options);
-  });
+  <script>
+    $(document).ready (function() {
+      const options = {
+        title: "{{ . }} blogroll",
+        urlBlogrollOpml: "https://feedland.org/opml?screenname={{ . }}",
+        urlFeedlandViewBlogroll: "https://feedland.org/?river=true&screenname={{ . }}", 
+        idWhereToAppend: "idBlogrollContainer",
+        maxItemsInBlogroll: 40,
+        blogrollDisplayedCallback: function () {
+          $(".divPageBody").css("display", "block");
+        }
+      };
+    
+      blogroll(options);
+    });
+  </script>
 
 {{ end }}

@@ -1,3 +1,18 @@
 {{ with .Get "username" }}
-  Testing: {{ . }}
+
+  $(document).ready (function() {
+    const options = {
+      title: "{{ . }} blogroll",
+      urlBlogrollOpml: "https://feedland.org/opml?screenname={{ . }}",
+      urlFeedlandViewBlogroll: "https://feedland.org/?river=true&screenname={{ . }}", 
+      idWhereToAppend: "idBlogrollContainer",
+      maxItemsInBlogroll: 40,
+      blogrollDisplayedCallback: function () {
+        $(".divPageBody").css("display", "block");
+      }
+    };
+  
+    blogroll(options);
+  });
+
 {{ end }}

@@ -11,3 +11,5 @@ To include the blogroll in a theme template, for example in a sidebar, first set
 ```
 {{ partial "feedland_embed.html" }}
 ```
+
+![icon](icon.png)

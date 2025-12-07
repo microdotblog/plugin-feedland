@@ -1,0 +1,26 @@
+{{ with .Site.Params.feedland_username }}
+
+  <div class="feedland">
+    <div class="divBlogrollContainerContainer">
+      <div class="divBlogrollContainer" id="idBlogrollContainer" tabindex="0"></div>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready (function() {
+      const options = {
+        title: "{{ . }} blogroll",
+        urlBlogrollOpml: "https://feedland.com/opml?screenname={{ . }}",
+        urlFeedlandViewBlogroll: "https://feedland.com/?river=true&screenname={{ . }}", 
+        idWhereToAppend: "idBlogrollContainer",
+        maxItemsInBlogroll: 40,
+        blogrollDisplayedCallback: function () {
+          $(".divPageBody").css("display", "block");
+        }
+      };
+    
+      blogroll(options);
+    });
+  </script>
+
+{{ end }}

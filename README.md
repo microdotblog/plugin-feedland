@@ -6,8 +6,8 @@ This plug-in adds a new shortcode that can be used in Micro.blog pages. In a blo
 {{< feedland username="your-username" >}}
 ```
 
-To include the blogroll in a theme template, for example in a sidebar, instead use this Hugo code:
+To include the blogroll in a theme template, for example in a sidebar, first set your FeedLand username in the plug-in settings. Then use this Hugo code:
 
 ```
-{{ partial "shortcodes/feedland.html" (dict "Page" . "username" "your-username") }}
+{{ partial "feedland_embed.html" }}
 ```

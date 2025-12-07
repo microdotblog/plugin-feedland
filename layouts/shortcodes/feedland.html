@@ -1,5 +1,4 @@
-{{ $username := .Get "username" | default .username }}
-{{ with $username }}
+{{ with .Get "username" }}
 
   <div class="feedland">
     <div class="divBlogrollContainerContainer">

@@ -5,5 +5,12 @@
   "includes": [
     "plugin_feedland.html",
     "/css/feedland.css"
-  ]  
+  ],
+  "fields": [
+    {
+      "field": "params.feedland_username",
+      "label": "FeedLand username",
+      "placeholder": "Your username on FeedLand.com."
+    }
+  ]
 }
